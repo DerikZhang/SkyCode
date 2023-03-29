@@ -1,7 +1,7 @@
 <idea-plugin>
-  <id>ChatGPT</id>
-  <name>ChatGPT</name>
-  <vendor email="wuzi@obiscr.com" url="https://obiscr.com">obiscr</vendor>
+  <id>GodGPT</id>
+  <name>GodGPT</name>
+  <vendor email="derik_lokcy93@163.com.com">derik</vendor>
 
   <depends>com.intellij.modules.platform</depends>
   <depends>org.intellij.plugins.markdown</depends>
@@ -10,7 +10,7 @@
   <!--<depends>com.intellij.modules.platform</depends>-->
 
   <extensions defaultExtensionNs="com.intellij">
-    <toolWindow id="ChatGPT" anchor="right" icon="/icons/toolWindow.svg" canCloseContents="true"
+    <toolWindow id="GodGPT" anchor="right" icon="/icons/toolWindow.svg" canCloseContents="true"
                 factoryClass="com.obiscr.chatgpt.MyToolWindowFactory"/>
     <applicationConfigurable parentId="tools" instance="com.obiscr.chatgpt.settings.OpenAISettingsPanel"
                              id="com.obiscr.chatgpt.settings.OpenAISettings"
@@ -37,7 +37,7 @@
   </extensions>
 
   <actions>
-    <group id="ChatGPT" text="Search with ChatGPT" description="Search with ChatGPT">
+    <group id="GodGPT" text="Search with ChatGPT" description="Search with ChatGPT">
       <action id="WrongAction" icon="/icons/toolWindow.svg"
               class="com.obiscr.chatgpt.ui.action.editor.BugAction"/>
       <action id="OptimizeAction" class="com.obiscr.chatgpt.ui.action.editor.OptimizeAction"

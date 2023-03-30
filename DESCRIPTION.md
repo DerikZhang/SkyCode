@@ -2,7 +2,7 @@
 
 ## English
 
-Testing chatGPT function by wowho, add new custom code and add default custom server message.
+Testing chatGPT function, add new custom code and add default custom server message.
 
 ## About this project
 

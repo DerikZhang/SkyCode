@@ -11,39 +11,39 @@
 
   <extensions defaultExtensionNs="com.intellij">
     <toolWindow id="GodGPT" anchor="right" icon="/icons/toolWindow.svg" canCloseContents="true"
-                factoryClass="com.wowho.godgpt.MyToolWindowFactory"/>
-    <applicationConfigurable parentId="tools" instance="com.wowho.godgpt.settings.OpenAISettingsPanel"
-                             id="com.obiscr.chatgpt.settings.OpenAISettings"
+                factoryClass="com.wowho.skycode.MyToolWindowFactory"/>
+    <applicationConfigurable parentId="tools" instance="com.wowho.skycode.settings.OpenAISettingsPanel"
+                             id="com.wowho.skycode.settings.OpenAISettings"
                              displayName="OpenAI"/>
-<!--    <groupConfigurable id="com.obiscr.chatgpt.settings.OpenAISettings" weight="-10"-->
+<!--    <groupConfigurable id="com.wowho.skycode.settings.OpenAISettings" weight="-10"-->
 <!--                       displayNameKey="OpenAI"-->
 <!--                       descriptionKey="Here are the relevant settings for OpenAI"/>-->
-    <applicationConfigurable parentId="com.obiscr.chatgpt.settings.OpenAISettings" instance="com.wowho.godgpt.settings.ChatGPTSettingsPanel"
-                             id="com.obiscr.chatgpt.settings.ChatGPT"
+    <applicationConfigurable parentId="com.wowho.skycode.settings.OpenAISettings" instance="com.wowho.skycode.settings.ChatGPTSettingsPanel"
+                             id="com.wowho.skycode.settings.ChatGPT"
                              displayName="ChatGPT"/>
-    <applicationConfigurable parentId="com.obiscr.chatgpt.settings.OpenAISettings" instance="com.wowho.godgpt.settings.GPT3_35_TurboPanel"
-                             id="com.obiscr.chatgpt.settings.GPT3-3.5-Turbo"
+    <applicationConfigurable parentId="com.wowho.skycode.settings.OpenAISettings" instance="com.wowho.skycode.settings.GPT3_35_TurboPanel"
+                             id="com.wowho.skycode.settings.GPT3-3.5-Turbo"
                              displayName="GPT 3.5 Turbo"/>
-    <applicationConfigurable parentId="com.obiscr.chatgpt.settings.OpenAISettings" instance="com.wowho.godgpt.settings.CustomActionsPanel"
-                             id="com.obiscr.chatgpt.settings.commandActions"
+    <applicationConfigurable parentId="com.wowho.skycode.settings.OpenAISettings" instance="com.wowho.skycode.settings.CustomActionsPanel"
+                             id="com.wowho.skycode.settings.commandActions"
                              displayName="Custom Actions"/>
-    <applicationService serviceImplementation="com.wowho.godgpt.settings.OpenAISettingsState"/>
-    <applicationService serviceImplementation="com.wowho.godgpt.core.TokenManager"/>
-    <projectService serviceImplementation="com.wowho.godgpt.core.ConversationManager"/>
-    <projectService serviceImplementation="com.wowho.godgpt.core.SendAction"/>
-    <projectService serviceImplementation="com.wowho.godgpt.ChatGPTHandler"/>
-    <projectService serviceImplementation="com.wowho.godgpt.GPT35TurboHandler"/>
-    <postStartupActivity implementation="com.wowho.godgpt.core.StartUpActivity"/>
+    <applicationService serviceImplementation="com.wowho.skycode.settings.OpenAISettingsState"/>
+    <applicationService serviceImplementation="com.wowho.skycode.core.TokenManager"/>
+    <projectService serviceImplementation="com.wowho.skycode.core.ConversationManager"/>
+    <projectService serviceImplementation="com.wowho.skycode.core.SendAction"/>
+    <projectService serviceImplementation="com.wowho.skycode.ChatGPTHandler"/>
+    <projectService serviceImplementation="com.wowho.skycode.GPT35TurboHandler"/>
+    <postStartupActivity implementation="com.wowho.skycode.core.StartUpActivity"/>
   </extensions>
 
   <actions>
     <group id="GodGPT" text="Search with ChatGPT" description="Search with ChatGPT">
       <action id="WrongAction" icon="/icons/toolWindow.svg"
-              class="com.wowho.godgpt.ui.action.editor.BugAction"/>
-      <action id="OptimizeAction" class="com.wowho.godgpt.ui.action.editor.OptimizeAction"
+              class="com.wowho.skycode.ui.action.editor.BugAction"/>
+      <action id="OptimizeAction" class="com.wowho.skycode.ui.action.editor.OptimizeAction"
               icon="/icons/toolWindow.svg" />
       <action id="CustomAction" icon="/icons/toolWindow.svg"
-              class="com.wowho.godgpt.ui.action.editor.CustomAction">
+              class="com.wowho.skycode.ui.action.editor.CustomAction">
         <keyboard-shortcut keymap="$default" first-keystroke="control shift Q"/>
       </action>
       <separator/>

@@ -38,7 +38,7 @@ public abstract class AbstractEditorAction extends AnAction {
     public void doActionPerformed(@NotNull AnActionEvent e) {
 
         // Check the toolWindow is active
-        ToolWindow chatGPT = ToolWindowManager.getInstance(e.getProject()).getToolWindow("ChatGPT");
+        ToolWindow chatGPT = ToolWindowManager.getInstance(e.getProject()).getToolWindow("SkyCode");
         assert chatGPT != null;
         if (!chatGPT.isActive()) {
             chatGPT.activate(null);

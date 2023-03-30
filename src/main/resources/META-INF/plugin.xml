@@ -1,6 +1,6 @@
 <idea-plugin>
-  <id>GodGPT</id>
-  <name>GodGPT</name>
+  <id>SkyCode</id>
+  <name>SkyCode</name>
   <vendor email="derik_lokcy93@163.com.com">derik</vendor>
 
   <depends>com.intellij.modules.platform</depends>
@@ -10,7 +10,7 @@
   <!--<depends>com.intellij.modules.platform</depends>-->
 
   <extensions defaultExtensionNs="com.intellij">
-    <toolWindow id="GodGPT" anchor="right" icon="/icons/toolWindow.svg" canCloseContents="true"
+    <toolWindow id="SkyCode" anchor="right" icon="/icons/toolWindow.svg" canCloseContents="true"
                 factoryClass="com.wowho.skycode.MyToolWindowFactory"/>
     <applicationConfigurable parentId="tools" instance="com.wowho.skycode.settings.OpenAISettingsPanel"
                              id="com.wowho.skycode.settings.OpenAISettings"
@@ -37,7 +37,7 @@
   </extensions>
 
   <actions>
-    <group id="GodGPT" text="Search with ChatGPT" description="Search with ChatGPT">
+    <group id="SkyCode" text="Search with ChatGPT" description="Search with ChatGPT">
       <action id="WrongAction" icon="/icons/toolWindow.svg"
               class="com.wowho.skycode.ui.action.editor.BugAction"/>
       <action id="OptimizeAction" class="com.wowho.skycode.ui.action.editor.OptimizeAction"

@@ -14,10 +14,7 @@
                 factoryClass="com.wowho.skycode.MyToolWindowFactory"/>
     <applicationConfigurable parentId="tools" instance="com.wowho.skycode.settings.OpenAISettingsPanel"
                              id="com.wowho.skycode.settings.OpenAISettings"
-                             displayName="OpenAI"/>
-<!--    <groupConfigurable id="com.wowho.skycode.settings.OpenAISettings" weight="-10"-->
-<!--                       displayNameKey="OpenAI"-->
-<!--                       descriptionKey="Here are the relevant settings for OpenAI"/>-->
+                             displayName="SkyCode"/>
     <applicationConfigurable parentId="com.wowho.skycode.settings.OpenAISettings" instance="com.wowho.skycode.settings.ChatGPTSettingsPanel"
                              id="com.wowho.skycode.settings.ChatGPT"
                              displayName="ChatGPT"/>

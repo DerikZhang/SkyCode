@@ -31,8 +31,8 @@
     <projectService serviceImplementation="com.wowho.skycode.ChatGPTHandler"/>
     <projectService serviceImplementation="com.wowho.skycode.GPT35TurboHandler"/>
     <postStartupActivity implementation="com.wowho.skycode.core.StartUpActivity"/>
+    <themeMetadataProvider path="/META-INF/SkyCode.themeMetadata.json"/>
   </extensions>
-
   <actions>
     <group id="SkyCode" text="Search with ChatGPT" description="Search with ChatGPT">
       <action id="WrongAction" icon="/icons/toolWindow.svg"
@@ -47,5 +47,36 @@
       <add-to-group group-id="EditorPopupMenu" anchor="first"/>
       <separator/>
     </group>
+    <action id="com.wowho.skycode.editor.PopupDialogAction" class="com.wowho.skycode.editor.PopupDialogAction"
+            text="Pop Dialog Action" description="SDK action example">
+      <add-to-group group-id="ToolsMenu" anchor="first"/>
+      <!--    IDE 2020.1版本支持，当该Action配置到 MainMenu 显示时，名称显示为：Popup Dialog Action-->
+      <!--    配置到其它地方显示的时候，名称显示为它上面配置的默认text：Action Basics Plugin: Popup Dialog Action-->
+      <override-text place="MainMenu" text="Popup Dialog Action"/>
+      <!--键盘快捷键-->
+      <keyboard-shortcut
+              keymap="$default"
+              first-keystroke="control alt A"
+              second-keystroke="C"/>
+      <!--    鼠标快捷键 -->
+      <mouse-shortcut
+              keymap="$default"
+              keystroke="control button3 doubleClick"/>
+      <add-to-group group-id="ToolsMenu" anchor="first"/>
+    </action>
+    <action id="com.wowho.skycode.editor.EditorIllustrationAction"
+            class="com.wowho.skycode.editor.EditorIllustrationAction" text="Editor Illustration Action"
+            description="Editor action example">
+      <add-to-group group-id="ToolsMenu" anchor="first"/>
+    </action>
+    <action id="com.wowho.skycode.editor.EditorAreaIllustration" class="com.wowho.skycode.editor.EditorAreaIllustration"
+            text="Editor Area Illustration" description="Editor area illustration">
+      <add-to-group group-id="ToolsMenu" anchor="first"/>
+    </action>
+    <action id="com.wowho.skycode.editor.EditorHandlerIllustration"
+            class="com.wowho.skycode.editor.EditorHandlerIllustration" text="Editor Handler Illustration"
+            description="Editor handler illustration">
+      <add-to-group group-id="ToolsMenu" anchor="first"/>
+    </action>
   </actions>
 </idea-plugin>

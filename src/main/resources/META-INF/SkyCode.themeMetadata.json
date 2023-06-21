@@ -1,0 +1,20 @@
+{
+  "name": "Sky Code",
+  "fixed": false,
+  "ui": [
+    {
+      "key": "SkyCode.label",
+      "description": "The label for my component. Not used anymore.",
+      "deprecated": false,
+      "source": "com.wowho.skycode",
+      "since": "2019.2"
+    },
+    {
+      "key": "EditorTabs.background",
+      "description": "Background under all tabs in the editor. If value isn't specified the value of DefaultTabs.background will be used",
+      "deprecated": false,
+      "source": "com.wowho.skycode",
+      "since": "2019.2"
+    }
+  ]
+}
